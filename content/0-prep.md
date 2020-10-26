@@ -5,28 +5,39 @@ nav: true
 
 # Workshop Prep
 
-To create your own materials using `workshop-template-b`, please create a free [GitHub account](https://github.com/join) if you do not have one already.
-Basic familiarity with the GitHub web interface will be helpful.
+To get ready for this workshop, please create a free [GitHub account](https://github.com/join){:target="_blank" rel="noopener"} if you do not have one already.
+That is all you really need! 
 
-For a quick introduction check out GitHub's [Hello World guide](https://guides.github.com/activities/hello-world/) and [Try Git](https://try.github.io/).
+The workshop introduces GitHub Pages using GitHub's web interface, demonstrating several ways to create gh-pages without using Jekyll locally.
+Basic familiarity with the GitHub web interface and HTML will be helpful. 
+For quick introductions check out GitHub's [Hello World guide](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} and w3schools [HTML Tutorial](https://www.w3schools.com/html/default.asp){:target="_blank" rel="noopener"}.
 
-It is possible to create a website with this template using only GitHub's web interface--in fact, it works great!
-However, for more advanced uses you will want Git, Ruby, and Jekyll installed on your computer to do local development.
+# Optional Prep *[optional!]*
 
-{% capture text %}
-1. Have a [GitHub](https://github.com) account.
-2. Fork or import this [repository](https://github.com/evanwill/workshop-template-b).
-3. Optional: have [Git](https://git-scm.com/), [Jekyll](https://jekyllrb.com/), and a nice [text editor](https://code.visualstudio.com/) installed.
-{% endcapture %}
-{% include card.html text=text header="Setup Overview" %}
+For more advanced uses of GitHub Pages and Jekyll you will want a text editor, Git, Ruby, and Jekyll installed on your computer.
+The instructions below will set up your local development environment and provide a bit of background.
 
-# Local Jekyll Setup [optional]
+## Text Editor
+
+When working with code you should have a good text editor.
+Word processors such as MS Word can not be used to create or edit code.
+Windows Notepad does not handle UTF-8 encoding or UNIX line endings that are standard for cross platform applications. 
+For basic editing, Windows [Notepad++](https://notepad-plus-plus.org/), Mac TextEdit, or Linux Gedit are sufficient.
+However, a more complete code editor will be helpful for managing Jekyll projects.
+
+Open-source cross platform suggestions:
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Atom](https://atom.io/)
 
 ## Install Git
 
-[Git](https://git-scm.com/) is a [free](https://www.gnu.org/philosophy/free-sw.en.html), [distributed](https://en.wikipedia.org/wiki/Distributed_version_control) version control system. [GitHub](https://github.com/) is a Git repository hosting service, a place to store and sync your work in the cloud--your Jekyll and GitHub Pages projects will be under Git version control, so you need the software on your machine. 
+[Git](https://git-scm.com/) is a [free](https://www.gnu.org/philosophy/free-sw.en.html), [distributed](https://en.wikipedia.org/wiki/Distributed_version_control) version control system. 
+[GitHub](https://github.com/) is a Git repository hosting service, a place to store and sync your work in the cloud--your Jekyll and GitHub Pages projects will be under Git version control, so you need the software on your machine.
 
-- Windows: install [Git for Windows](https://git-for-windows.github.io/) using the default options. This will give you Git, Git Bash, and Git GUI. Git Bash is a great terminal that lets you use UNIX style commands on Windows.
+Installing it is pretty straightforward:
+
+- Windows: install [Git for Windows](https://git-for-windows.github.io/) using the default options, except when setup asks you to choose the default editor used by Git, select "Use the Nano editor by default". This will give you Git, Git Bash, and Git GUI. Git Bash is a great terminal that lets you use UNIX style commands and utilities on Windows.
 - Mac: check if Git is already installed by opening terminal and typing `git --version`. If you do not have it, download the official [Mac installer](https://git-scm.com/downloads).
 - Linux: check if Git is already installed by opening terminal and typing `git --version`. If you do not have it, install from your distribution's software center or package manager (for Ubuntu `sudo apt install git`).
 
@@ -61,15 +72,3 @@ This will take a minute as Gem installs all the dependencies and builds extensio
 {% capture alert %}*Note:* Jekyll does not officially support Windows, however it is cross platform (they just don’t officially write windows documentation or check for bugs).
 There is a [Jekyll on Windows](https://jekyllrb.com/docs/windows/#installation) page, but it can be out of date and inaccurate.{% endcapture %}
 {% include alert.html text=alert color="warning" %}
-
-# Text Editor
-
-When working with code you should have a good text editor.
-Windows notepad does not handle UTF-8 encoding or UNIX line endings that are standard for cross platform applications. 
-For basic editing, Windows [Notepad++](https://notepad-plus-plus.org/), Mac TextEdit, or Linux Gedit are sufficient.
-However, a more complete code editor will be helpful for managing Jekyll projects.
-
-Open-source cross platform suggestions:
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Atom](https://atom.io/)
