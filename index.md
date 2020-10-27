@@ -5,10 +5,10 @@ layout: default
 
 # Introduction to Creating Websites with GitHub Pages and Jekyll
 
-{% include figure.html img="uidaho-workshop.jpg" alt="intro image here" caption="Library workshop" width="75%" %}
+{% include figure.html img="octojekyll.png" alt="Octojekyll logo" width="60%" %}
 
 With [GitHub Pages](https://pages.github.com/) you can quickly create and publish a website for free! 
-It is an ideal solution for creating a simple project, open educational workshop, or personal site to highlight your academic work. 
+It is an ideal solution for creating a simple project, open educational resource, or personal site to highlight your academic work. 
 
 This workshop will introduce the basics of using free hosting from GitHub Pages which is integrated with the popular static website generator Jekyll. 
 Along the way we will cover the basics of GitHub, HTML, Markdown, and Jekyll. 
