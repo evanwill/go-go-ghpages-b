@@ -4,6 +4,19 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-{% if page.topics %}<div class="alert alert-info text-center">Topics: {{ page.topics }}</div>{% endif %}
+{% if page.topics %}<div class="ml-3 mb-3 border-bottom">Topics: <strong>{{ page.topics }}</strong></div>{%- endif -%}
+
+{% if page.description %}<div class="ml-3 mb-4">{{ page.description | markdownify }}</div>{%- endif -%}
+
+{% if page.youtubeid %}
+<div class="text-center mb-3 border rounded p-2">
+    <figure class="mb-0">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ page.youtubeid }}?rel=0&modestbranding=1" allowfullscreen></iframe>
+        </div>
+        <figcaption class="figure-caption"><a href="https://youtu.be/{{ page.youtubeid }}" target="_blank" rel="noopener">Section Video</a></figcaption>
+    </figure>
+</div>
+{%- endif -%}
 
 {{ content }}
