@@ -5,6 +5,7 @@
 var idx = lunr(function () {
   this.ref('id')
   this.field('title')
+  this.field('topics')
   this.field('text')
 
   //this.pipeline.remove(lunr.trimmer)
@@ -12,6 +13,7 @@ var idx = lunr(function () {
   for (var item in store) {
     this.add({
       title: store[item].title,
+      topics: store[item].topics,
       text: store[item].text,
       id: item
     })
@@ -45,6 +47,9 @@ function lunr_search () {
       '<tr>'+
           '<td class="">' +
             '<p class="h4"><a href="' + store[ref].url + '">' + store[ref].title+ '</a></p>' +
+            '<p class="ml-3">Topics: ' +
+            store[ref].topics +
+            '</p>' +
             '<p class="ml-3">' +
             store[ref].text.split(" ").splice(0,20).join(" ") + '...<br>' +
             '</p></td>' +
