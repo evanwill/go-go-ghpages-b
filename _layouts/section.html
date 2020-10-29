@@ -9,12 +9,12 @@ layout: default
 {% if page.description %}<div class="ml-3 mb-4">{{ page.description | markdownify }}</div>{%- endif -%}
 
 {% if page.youtubeid %}
-<div class="text-center mb-3 border rounded p-2">
+<div class="text-center mb-4 border rounded p-2">
     <figure class="mb-0">
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ page.youtubeid }}?rel=0&modestbranding=1" allowfullscreen></iframe>
         </div>
-        <figcaption class="figure-caption"><a href="https://youtu.be/{{ page.youtubeid }}" target="_blank" rel="noopener">Section Video</a></figcaption>
+        <figcaption class="figure-caption mt-1"><a href="https://youtu.be/{{ page.youtubeid }}" target="_blank" rel="noopener">Section Video</a></figcaption>
     </figure>
 </div>
 {%- endif -%}
