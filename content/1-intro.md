@@ -8,7 +8,7 @@ description: >
 youtubeid: SWVjQsvQocA
 ---
 
-## Git -> GitHub -> GitHub Pages
+## Git, GitHub, & GitHub Pages
 
 Before we get started we better clarify some terms:
 
@@ -48,14 +48,25 @@ All content must follow the [community guidelines](https://help.github.com/artic
 
 ## GitHub Practice
 
-Let's create a new repository, then write some Markdown and HTML to see how gh-pages works!
+Let's create a new repository, then write some Markdown and HTML to see how gh-pages works.
 
 ### Create a New Repository 
 
-- create a repo, 
-    - intro to github
-    - intro to repo features
-    - intro to activate gh-pages
+- Log into [GitHub](https://github.com/){:target="_blank" rel="noopener"}
+- Click the `+` icon in the upper right of the nav bar.
+- Select "New repository"
+- Fill in "Create a new repository" page:
+    - "Owner" is you. Every repo is associated with an individual or organization.
+    - "Repository name" is what you want to call this repo. It must be unique among the owner's repos. SInce this repository will become a website, use all lowercase, no spaces, no weird characters. Dash (`-`) or underscore (`_`) are okay.
+    - "Public" / "Private". Anyone can visit a public repository--but that's okay! The entire web is public, so once you create a website, the code of your website is public anyway. GitHub is mostly open source code, i.e. public repositories with code people can view and copy for free (following the [license](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/licensing-a-repository){:target="_blank" rel="noopener"} applied by the owner).
+    - Check the "Add a README file option. This makes it easier to get started.
+- Finally, click the green "Create repository" button. You will be redirected to your brand new repository!
+
+Take a minute to explore your new repository.
+It contains one file, `README.md` that was automatically added. 
+
+Code, Issues, Settings.
+active gh-pages
 
 ### Edit your README (Markdown Intro)
 
