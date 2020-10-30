@@ -137,7 +137,12 @@ Most of the Web is made up of HTML, CSS, and JS:
 
 When you access a website, the server sends your computer the code which your browser renders into a web page that you can view and interact with.
 Thus, one fascinating aspect of the web is that everyone must share code to participate.
+
+{% capture source %}
 Right click on any web page and select "**View page source**" to see the code that is being rendered by the browser (shortcut: `Ctrl + U`). 
+Right click on any element in the page and select "Inspect" or "Inspect Element" to open your browser's built in developer tools.
+This is a great way to learn about HTML and to understand how others created the sites you use.{% endcapture %}
+{% include card.html text=source title="view-source"%}
 
 To review the basic building blocks of the web, next let's create an HTML file. 
 We will start with an `index.html` file because by default the server provides index as the home page of your site.
