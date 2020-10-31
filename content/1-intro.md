@@ -12,10 +12,10 @@ youtubeid: SWVjQsvQocA
 
 Before we get started, let's clarify some terms:
 
-[<span class="h4">Git</span>](https://git-scm.com/){:target="_blank" rel="noopener"} is a popular [free](https://www.gnu.org/philosophy/free-sw.en.html){:target="_blank" rel="noopener"}, [distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control){:target="_blank" rel="noopener"} system--i.e. a piece of software used to track the history of changes in a folder of files. 
+[<span class="term">Git</span>](https://git-scm.com/){:target="_blank" rel="noopener"} is a popular [free](https://www.gnu.org/philosophy/free-sw.en.html){:target="_blank" rel="noopener"}, [distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control){:target="_blank" rel="noopener"} system--i.e. a piece of software used to track the history of changes in a folder of files. 
 Git can be used on your personal computer, or by online services to track the development of a project, such as...
 
-[<span class="h4">GitHub</span>](https://github.com/){:target="_blank" rel="noopener"}, a popular web platform for hosting Git repositories--i.e. a place to store and sync your project files online.
+[<span class="term">GitHub</span>](https://github.com/){:target="_blank" rel="noopener"}, a popular web platform for hosting Git repositories--i.e. a place to store and sync your project files online.
 Built around the powerful version control of Git, it provides a handy web interface for managing, editing, and collaborating on repositories.
 
 Originally designed to manage large open-source software projects, GitHub's use has expanded to many other types of organizations and individuals, with [over 40 million users](https://octoverse.github.com/).
@@ -23,7 +23,7 @@ GitHub provides a bunch of built in project management features including...
 
 {% include figure.html img="octojekyll.png" alt="Octojekyll logo" width="35%" %}
 
-[<span class="h4">GitHub Pages</span>](https://pages.github.com/){:target="_blank" rel="noopener"}, free static web hosting service available as part of every repository--this means with the *click of a button* you can fire up a new website!
+[<span class="term">GitHub Pages</span>](https://pages.github.com/){:target="_blank" rel="noopener"}, free static web hosting service available as part of every repository--this means with the *click of a button* you can fire up a new website!
 
 Intended to host relatively simple sites for your GitHub portfolio or project documentation,
 GitHub Pages is an ideal solution for creating an open educational resource or personal site to highlight your academic work. 
@@ -38,7 +38,7 @@ There are *soft* limits and guidelines for gh-pages usage: sites should be < 1GB
 If your site exceeds these quotas, GitHub will send you a notice asking you to modify the repository.
 
 All content must follow the [community guidelines](https://help.github.com/articles/github-community-guidelines/), e.g. no violence, obscene sex, or illegal stuff.{% endcapture %}
-{% include alert.html text=text color="info" %}
+{% include alert.html text=text color="warning" %}
 
 ----------------
 
@@ -69,19 +69,20 @@ Check out the ["Issues" tab](https://guides.github.com/features/issues/), a grea
 - Under "Source", use the dropdown to select "main" branch and leave folder as "/ (root)".
 - Click "Save".
 
-{% capture source %}GitHub Pages now allows any branch root or "docs" folder to be [selected as the source](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). 
+{% capture source %}GitHub Pages now allows *any* branch's root or "docs" folder to be [selected as the source](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). 
 Following earlier conventions, creating a branch named `gh-pages` will automatically active it as the source. 
+
 Keep in mind that until recently the default branch was called "master", rather than "main", so older documentation may still use that terminology. 
 {% endcapture %}
-{% include alert.html text=source color="secondary" %}
+{% include alert.html text=source color="info" %}
 
-### README, Editing, and Markdown Intro
+### README, Markdown, and Editing Intro
 
 You will notice that by default the contents of the `README.md` file are displayed on the home page of your repository. 
-This is a convention used in many code projects--**README** is a place to write the basics *about* your repository so users will understand what it contains, who made it, and any other information they should know. 
+This is a convention used in many code projects--<span class="term">README</span> is a place to write the basics *about* your repository so users will understand what it contains, who made it, and any other information they should know. 
 On GitHub READMEs are usually written in Markdown (thus the `.md` extension). 
 
-**Markdown** is a standard to simplify writing content for the web designed to be easy to read and write. 
+<span class="term">Markdown</span> is a standard to simplify writing content for the web designed to be easy to read and write. 
 [GitHub Markdown Flavor](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax){:target="_blank" rel="noopener"} can be used any where on GitHub to format your writing in comments, Issues, and `.md` files.
 The basics are intuitive, much like formatting a plain text email, as can be seen in the [Mastering Markdown Guide](https://guides.github.com/features/mastering-markdown/).
 
@@ -120,14 +121,14 @@ A numbered list is created using a number + `.`, like:
 
 ```
 
-- When done editing, scroll to the bottom of the page to the "Commit changes" section. **Commit** is a git concept--basically taking a snap shot of the changes that will be permanently stored in your repository's history. Every commit records a user name, email, and message. 
+- When done editing, scroll to the bottom of the page to the "Commit changes" section. <span class="term">Commit</span> is a git concept--basically taking a snap shot of the changes that will be permanently stored in your repository's history. Every commit records a user name, email, and message. 
 - Fill in the first text box with your "commit message", i.e. a short description of what changes you have made. This is your message to the future to help understand the code.
 - Click the green "Commit changes" button to complete your first `git commit`!
 
 Once you commit, you will immediately see your README's updated content rendered on the page.
 Behind the scenes GitHub is converting your Markdown code into HTML for display. 
 
-### HTML Intro and Create index.html
+### HTML, Index.html, and Create File Intro
 
 Most of the Web is made up of HTML, CSS, and JS:
 
@@ -139,13 +140,14 @@ When you access a website, the server sends your computer the code which your br
 Thus, one fascinating aspect of the web is that everyone must share code to participate.
 
 {% capture source %}
-Right click on any web page and select "**View page source**" to see the code that is being rendered by the browser (shortcut: `Ctrl + U`). 
+Right click on any web page and select <span class="term">View page source</span> to see the code that is being rendered by the browser (shortcut: `Ctrl + U`). 
 Right click on any element in the page and select "Inspect" or "Inspect Element" to open your browser's built in developer tools.
+
 This is a great way to learn about HTML and to understand how others created the sites you use.{% endcapture %}
-{% include card.html text=source title="view-source"%}
+{% include alert.html text=source color="info"%}
 
 To review the basic building blocks of the web, next let's create an HTML file. 
-We will start with an `index.html` file because by default the server provides index as the home page of your site.
+We will start with an <span class="term">index.html</span> file because by default the server provides index as the home page of your site.
 
 - Click the "Code" tab to go to your repository's home page.
 - Click the "Add file" button and select "Create new file". This will open the web-based text editor.
@@ -189,19 +191,19 @@ Once it is complete (assuming everything goes well!), a green check will appear 
 
 ## Reference 
 
-**Git & GitHub:**
+<span class="term">Git & GitHub:</span>
 
 - [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
 - [GitHub Learning Lab](https://lab.github.com/){:target="_blank" rel="noopener"}
 
-**Markdown:**
+<span class="term">Markdown:</span>
 
 - [Markdown](https://daringfireball.net/projects/markdown/) (original spec by John Gruber)
 - [Mastering Markdown GitHub Guide](https://guides.github.com/features/mastering-markdown/)
 - [GitHub Markdown documentation](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)
 - [Markdown and Pandoc for Academic Writing](https://evanwill.github.io/write-md/)
 
-**HTML:**
+<span class="term">HTML:</span>
 
 - [w3schools HTML Tutorial](https://www.w3schools.com/html/default.asp){:target='_blank' rel='noopener'}
 - [HTML Basics, MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
