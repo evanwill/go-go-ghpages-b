@@ -80,3 +80,13 @@ div.highlighter-rouge {
     font-size: 1.5rem;
     font-weight: bolder;
 }
+
+/* scroll to top */
+#scroll-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 35px; 
+    right: 20px; 
+    z-index: 99;
+    font-size: 40px; 
+}
