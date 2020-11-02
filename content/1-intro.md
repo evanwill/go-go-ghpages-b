@@ -5,7 +5,7 @@ topics: github; gh-pages; README; Markdown; HTML
 description: >
     This section introduces the GitHub web interface, walks through creating a repository, and covers the basics of Markdown and HTML. 
     These topics are important for understanding the basic building blocks of websites and learning how to work with files on GitHub.
-youtubeid: SWVjQsvQocA
+#youtubeid: SWVjQsvQocA
 ---
 
 ## Git, GitHub, & GitHub Pages
@@ -60,7 +60,7 @@ Let's create a new repository, then write some Markdown and HTML to see how gh-p
 
 Take a minute to explore your new repository.
 It currently contains one file, `README.md` that was automatically added. 
-Check out the ["Issues" tab](https://guides.github.com/features/issues/), a great feature for starting conversations and tracking tasks related to the repository.
+Check out the ["Issues" tab](https://guides.github.com/features/issues/){:target="_blank" rel="noopener"}, a great feature for starting conversations and tracking tasks related to the repository.
 
 ### Activate GitHub Pages
 
@@ -84,7 +84,7 @@ On GitHub READMEs are usually written in Markdown (thus the `.md` extension).
 
 <span class="term">Markdown</span> is a standard to simplify writing content for the web designed to be easy to read and write. 
 [GitHub Markdown Flavor](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax){:target="_blank" rel="noopener"} can be used any where on GitHub to format your writing in comments, Issues, and `.md` files.
-The basics are intuitive, much like formatting a plain text email, as can be seen in the [Mastering Markdown Guide](https://guides.github.com/features/mastering-markdown/).
+The basics are intuitive, much like formatting a plain text email, as can be seen in the [Mastering Markdown Guide](https://guides.github.com/features/mastering-markdown/){:target="_blank" rel="noopener"}.
 
 Edit your README using Markdown:
 
@@ -163,7 +163,9 @@ We will start with an <span class="term">index.html</span> file because by defau
     <body>
         <h1>Header One: Big Text</h1>
         <p>An example paragraph.</p>
-        <p>Another paragraph with a link to <a href="https://github.com">GitHub</a>.</p>
+        <h2>Header Two</h2>
+        <p>Paragraph with <strong>Bold text</strong>.</p>
+        <p>A link to <a href="https://github.com">GitHub</a>.</p>
     </body>
 </html>
 
@@ -189,8 +191,7 @@ Once it is complete (assuming everything goes well!), a green check will appear 
 
 -------------
 
-## Reference 
-
+{% capture reference %}
 <span class="term">Git & GitHub:</span>
 
 - [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
@@ -198,13 +199,16 @@ Once it is complete (assuming everything goes well!), a green check will appear 
 
 <span class="term">Markdown:</span>
 
-- [Markdown](https://daringfireball.net/projects/markdown/) (original spec by John Gruber)
-- [Mastering Markdown GitHub Guide](https://guides.github.com/features/mastering-markdown/)
-- [GitHub Markdown documentation](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)
-- [Markdown and Pandoc for Academic Writing](https://evanwill.github.io/write-md/)
+- [Markdown](https://daringfireball.net/projects/markdown/){:target="_blank" rel="noopener"} (original spec by John Gruber)
+- [Mastering Markdown GitHub Guide](https://guides.github.com/features/mastering-markdown/){:target="_blank" rel="noopener"}
+- [GitHub Markdown documentation](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax){:target="_blank" rel="noopener"}
+- [Markdown and Pandoc for Academic Writing](https://evanwill.github.io/write-md/){:target="_blank" rel="noopener"}
 
 <span class="term">HTML:</span>
 
 - [w3schools HTML Tutorial](https://www.w3schools.com/html/default.asp){:target='_blank' rel='noopener'}
-- [HTML Basics, MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Web Crash Course!](https://evanwill.github.io/web-crash-course/)
+- [HTML Basics, MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics){:target="_blank" rel="noopener"}
+- [Web Crash Course!](https://evanwill.github.io/web-crash-course/){:target="_blank" rel="noopener"}
+
+{% endcapture %}
+{% include card.html text=reference header="Reference" %}
