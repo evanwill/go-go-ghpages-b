@@ -132,13 +132,14 @@ To add some example data to our blog, let's manually create a CSV:
 - Fill in your "commit message" and click the green "Commit changes" button.
 
 ```
-animal,size,color
+name,size,color
 cat,small,black
 dog,medium,brown
 frog,small,green
 tiger,large,orange
 elephant,large,grey
 muffin,small,brown
+whale,large,blue
 
 ```
 
@@ -235,24 +236,133 @@ It is your opportunity to let us know all the details "about" your project:
 
 ### Advanced Liquid
 
-It is import to display our animal data, so let's jump into a bit more advanced Liquid.
+It is *very important* to display our animal data, so let's jump into some more advanced Liquid.
 Start editing `about.md` again:
 
 - On "about.md", click the "pencil" icon to start editing.
 - Edit your about.md file trying out the following options:
 
-- create _data/animals.csv
-    - intro to data folder 
-    - create csv
-    - intro to Liquid data and for loop 
-    - use to add list to about.md
-    - add an Liquid if
+<div class="ml-4" markdown="1"> 
+
+#### For Loop
+
+First, we need to access the information in `_data/animals.csv`. 
+Jekyll exposes all the data files at `site.data.` + the filename without the extension, i.e. our data will be at `site.data.animals`.
+
+Second, we need a Liquid [for loop](https://shopify.github.io/liquid/tags/iteration/){:target="_blank" rel="noopener"} to iterate over each line in the CSV.
+This is set up like:
+
+```{% raw %}
+{% for animal in site.data.animals %}
+
+{% endfor %}{% endraw %}
+```
+
+Now inside the for loop we will need to access the individual values from each CSV column. 
+This is done by adding the column name to the iteration variable using dot notation, e.g `animal.name` or `animal.size`. 
+We can use these variables in Markdown to set up a template inside the loop. 
+For example, we could create a list:
+
+```{% raw %}
+{% for animal in site.data.animals %}
+- The {{ animal.name }} is a {{ animal.size }} animal.
+{% endfor %}{% endraw %}
+```
+
+This Liquid will retrieve the data from `animals.csv`, and for each row of the CSV fill in the template using the values in columns "name" and "size".
+
+#### If Statement
+
+Maybe we want another list with some special formatting for large animals.
+We can use a Liquid [if statement](https://shopify.github.io/liquid/tags/control-flow/){:target="_blank" rel="noopener"} for this enhancement: 
+
+```{% raw %}
+{% for animal in site.data.animals %}
+{% if animal.size == "large" %}- <strong style="color: {{ animal.color }};">{{ animal.name }}</strong>
+{% else %}- <small>{{ animal.name }}</small>
+{% endif %}
+{% endfor %}{% endraw %}
+```
+
+In this loop, each row will be checked by the "if" condition.
+If the value in the CSV column "size" is "large", then our template with `strong` style will be applied making the animal "name" bold and colored.
+If not, then the animal "name" will be in small text.
+
+Always be sure to close your If with `{% raw %}{% endif %}{% endraw %}`!
+
+#### Where Filter
+
+Liquid has many options to transform and manipulate data using filters.
+A common use is to subset the items in your data. 
+
+For example, we need a list of only the small animals.
+First, we set up a new object using the [Assign tag](https://shopify.github.io/liquid/tags/variable/){:target="_blank" rel="noopener"}.
+Then we can apply a [Where filter](https://shopify.github.io/liquid/filters/where/){:target="_blank" rel="noopener"} to select only the rows with "small" in the size column. 
+
+```{% raw %} 
+{% assign small_animals = site.data.animals | where: "size", "small" %}
+{% for animal in small_animals %}
+- {{ animal.name | upcase }}
+{% endfor %}{% endraw %}
+```
+
+</div>
+
+- Fill in your "commit message" and click the green "Commit changes" button.
+- Wait for the green check showing successful build, then refresh your about page to see the new additions!
+
+Here is my final About page for reference:
+
+```
+---
+layout: dark
+title: About
+example: This is an example value.
+---
+
+{% raw %}This page describes the amazing {{ site.title }} by {{ site.author.name }}.
+{{ page.example }}
+
+{% include big-cat.html %}
+
+## About About Pages
+
+The About page is a common convention found on websites.
+It is your opportunity to let us know all the details "about" your project:
+
+- focus and topic area
+- people involved
+- code and projects used
+
+## List of Animals
+
+{% for animal in site.data.animals %}
+- The {{ animal.name }} is a {{ animal.size }} animal.
+{% endfor %}
+
+## Large Animals are Better
+
+{% for animal in site.data.animals %}
+{% if animal.size == "large" %}- <strong style="color: {{ animal.color }};">{{ animal.name }}</strong>
+{% else %}- <small>{{ animal.name }}</small>
+{% endif %}
+{% endfor %}
+
+## List of Small Animals
+
+{% assign small_animals = site.data.animals | where: "size", "small" %}
+{% for animal in small_animals %}
+- {{ animal.name | upcase }}
+{% endfor %}
+
+{% endraw %}
+```
 
 -------------
 
 {% capture reference %}
-- [Liquid documentation](https://shopify.github.io/liquid/){:target="_blank" rel="noopener"}
-- [Jekyll's Liquid docs](https://jekyllrb.com/docs/liquid/){:target="_blank" rel="noopener"}
+- [Jekyll's Liquid docs](https://jekyllrb.com/docs/liquid/){:target="_blank" rel="noopener"} (Note: Jekyll provides some enhancements to Liquid that are not part of the standard spec)
+- [Liquid documentation](https://shopify.github.io/liquid/){:target="_blank" rel="noopener"} (Note: these Liquid docs are for the most basic version. Some enhanced features are described in the [Shopify Liquid Reference](https://shopify.dev/docs/themes/liquid/reference){:target="_blank" rel="noopener"}, however, these docs are focused on the Shopify platform and may not apply to Jekyll's implementation)
 
 {% endcapture %}
 {% include card.html text=reference header="Reference" %}

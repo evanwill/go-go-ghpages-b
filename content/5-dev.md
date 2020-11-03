@@ -8,9 +8,6 @@ description: >
 
 # Using Jekyll locally
 
-
-## Optional Prep *[very optional!]*
-
 If you are excited to jump further into GitHub Pages and Jekyll you might want some additional software installed on your computer, 
 including a text editor, Git, Ruby, and Jekyll.
 The instructions below will set up your local development environment and provide a bit of background.
