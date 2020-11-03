@@ -6,8 +6,6 @@ description: >
     Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow.
 ---
 
-# Using Jekyll locally
-
 If you are excited to jump further into GitHub Pages and Jekyll you might want some additional software installed on your computer, 
 including a text editor, Git, Ruby, and Jekyll.
 The instructions below will set up your local development environment and provide a bit of background.
