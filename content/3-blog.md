@@ -1,9 +1,10 @@
 ---
 title: Exploring Jekyll Basics via a Blog
 nav: Blog
-topics: config.yml; index.md; posts
+topics: YAML; config.yml; front matter; index.md; posts
 description: > 
     In this section we set up a Jekyll blog on GitHub Pages to learn about _config.yml, YML front matter, and Posts.
+youtubeid: SWVjQsvQocA
 ---
 
 ## Set Up Your Project Repository
@@ -66,11 +67,11 @@ A few notes about the YAML in the example above:
 - Blank lines are ignored, so use them to organize your file and make it easier to read.
 - `title` is an example of a simple key-value pair. It is optional to put quotes around the value (unless it contains a colon or multiple lines)
 - `author` is an example of a nested value, with two children `name` and `email` nested by indenting two spaces. 
-- The variables included in the example are based on options the [Minima](https://github.com/jekyll/minima){:target="_blank" rel="noopener"} theme supports--they could be different depending on the theme or project you are creating. Documentation for each theme should tell you what variables can be used to customize the template.
+- The variables included in the example are based on options the [Minima](https://github.com/jekyll/minima){:target="_blank" rel="noopener"} (v.3) theme supports--they could be different depending on the theme or project you are creating. Documentation for each theme should tell you what variables can be used to customize the template.
 
 {% capture themes %}
 In this example we set the `remote_theme` to the official Jekyll theme [Minima](https://github.com/jekyll/minima){:target="_blank" rel="noopener"}.
-Following the pattern `remote_theme: username/repositoryname` allows you to use any theme that is hosted in a GitHub repository. 
+Following the pattern `remote_theme: username/repositoryname` allows you to use any theme that is hosted in a GitHub repository ([browse options](https://github.com/topics/jekyll-theme){:target="_blank" rel="noopener"}).
 
 However, the `remote_theme` setting is *specific to GitHub Pages*.
 
@@ -79,12 +80,13 @@ GitHub Pages has only a few [supported themes](https://pages.github.com/themes/)
 When using Jekyll locally, the gem-based theme in config will be installed (using `bundle install`), downloading a copy of the theme and storing it with your Ruby Gems.
 In theory, this leaves your project folder clean so you can tweak a few customization options and just focus on content creation.
 
-In practice, because gem-based themes are essentially hidden, extensive customization can be come confusing.
+In practice, because gem-based themes are essentially hidden, extensive customization can be confusing.
 If you are doing a lot of tweaking or want to create your own theme it may be simpler to include the theme files directly in your project repository. 
-In that case do not include a `theme` setting in `_config.yml`.
+In that case do NOT include a `theme` setting in `_config.yml`.
+(Personally, I rarely use a `theme`!)
 
 {% endcapture %}
-{% include card.html text=themes header="Theme Configuration" %}
+{% include alert.html text=themes color="warning" %}
 
 ----------
 
@@ -114,7 +116,7 @@ It is often necessary to set a `layout` to use custom templates for different ty
 
 - On your repository's home page, click the "Add file" button and select "Create new file". 
 - Type in the name for your file: `index.md` 
-- Put your cursor in the editor and create your home page following the example below. Note that Minima has a special `home` layout that will automatically add content feeds. Thus the only front matter necessary is `layout`, followed by some very basic Markdown content, since the home page will feature a feed of your blog posts.
+- Put your cursor in the editor and create your home page following the example below. Note that Minima has a special `home` layout that will automatically add content feeds. Thus the only front matter necessary is `layout`. Follow by some very basic Markdown content, since the home page will already feature a feed of your blog posts.
 - When done editing, scroll to the bottom of the page to the "Commit changes" section. 
 - Fill in your "commit message" and click the green "Commit changes" button.
 
@@ -136,8 +138,8 @@ Look for the green check next to your commit history, then surf to the URL follo
 
 ## Write Posts
 
-Blogs require posts... 
-and Jekyll has the concept builtin to its default structure.
+Blogs are made up of <span class="term">[Posts](https://jekyllrb.com/docs/posts/){:target="_blank" rel="noopener"}</span>... 
+and Jekyll has the concept built in to its default structure.
 Markdown stubs created in the `_posts` folder will flesh out your content and can be accessed in layouts by date, tag, and category. 
 
 Each post must be given a filename following the pattern:
@@ -191,9 +193,8 @@ A numbered list is created using a number + `.`, like:
 
 ### Keep Posting, More Markdown
 
-- On your repository's home page, click the "Add file" button and select "Create new file". 
-- Start by typing `_posts` followed by `/`. Adding the slash will automatically let GitHub know you want to create a new folder ("_posts"). 
-- Continue typing your post filename: `2020-10-22-second-post.md`
+- On your repository's home page, click the "Add file" button and select "Create new file".
+- Continue typing your post filename: `_posts/2020-10-22-second-post.md`
 - Put your cursor in the editor to add the front matter and content, following the example below to learn some more Markdown syntax.
 - When done editing, scroll to the bottom of the page to the "Commit changes" section, fill in your "commit message" and click the green "Commit changes" button.
 
@@ -229,12 +230,54 @@ A table:
 
 ```
 
+----------------
+
+## Posts, Collections, & Pages
+
+Of course not every website is a blog. 
+The `_posts` directory is completely **optional**. 
+Posts are optimized to simplify writing blog-like content with features like date, title, and categories built into the filename convention. 
+
+<span class="term">[Collections](https://jekyllrb.com/docs/collections/){:target="_blank" rel="noopener"}</span> provide another flexible option for creating groups of content that can be sorted and iterated over using built in methods (Posts are in fact a specialized, built in Collection).
+
+However, many sites will use *only* <span class="term">[Pages](https://jekyllrb.com/docs/pages/){:target="_blank" rel="noopener"}</span> for content. 
+
+We have already created `index.md`, so let's create the other *essential*, an About page.
+
+### Create about.md
+
+- On your repository's home page, click the "Add file" button and select "Create new file". 
+- Type in the name for your file: `about.md`
+- Create your about with front matter and Markdown following the example below.
+- Fill in your "commit message" and click the green "Commit changes" button.
+
+```
+---
+layout: page
+title: About
+---
+
+Some Markdown content describing your site.
+
+## About About Pages
+
+The About page is a common convention found on websites.
+It is your opportunity to let us know all the details "about" your project:
+
+- focus and topic area
+- people involved
+- code and projects used
+
+```
+
+*Be sure to check out what your blog looks like with all this new content!*
+
 -------------
 
 {% capture reference %}
-- [Jekyll themes docs](https://jekyllrb.com/docs/themes/)
-- [Jekyll front matter docs](https://jekyllrb.com/docs/front-matter/)
-- [Jekyll Posts docs](https://jekyllrb.com/docs/posts/)
+- [Jekyll themes docs](https://jekyllrb.com/docs/themes/){:target="_blank" rel="noopener"}
+- [Jekyll front matter docs](https://jekyllrb.com/docs/front-matter/){:target="_blank" rel="noopener"}
+- [Jekyll Posts docs](https://jekyllrb.com/docs/posts/){:target="_blank" rel="noopener"}
 
 {% endcapture %}
 {% include card.html text=reference header="Reference" %}

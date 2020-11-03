@@ -4,6 +4,7 @@ nav: Jekyll
 topics: static web; static generators; Jekyll
 description: > 
     Learn about static web approaches, static site generators, and how Jekyll fits in with GitHub Pages.
+#youtubeid: SWVjQsvQocA
 ---
 
 ## Static Web
