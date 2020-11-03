@@ -9,6 +9,7 @@ layout: default
 
 With [GitHub Pages](https://pages.github.com/) you can quickly create and publish a website for free! 
 It is an ideal solution for creating a simple project, open educational resource, or personal site to highlight your academic work. 
+Because hosting through gh-pages is free and builds valuable transferable skills, this is a great option for teaching and learning.
 
 This workshop will introduce using free hosting from GitHub Pages integrated with the popular static website generator Jekyll. 
 Along the way we will cover the basics of GitHub, HTML, Markdown, and Jekyll. 
