@@ -16,6 +16,7 @@ Before we get started, let's clarify some terms:
 Git can be used on your personal computer, or by online services to track the development of a project, such as...
 
 [<span class="term">GitHub</span>](https://github.com/){:target="_blank" rel="noopener"}, a popular web platform for hosting Git repositories--i.e. a place to store and sync your project files online.
+Think of it as Google Drive for code with super robust "track changes" baked in.
 Built around the powerful version control of Git, it provides a handy web interface for managing, editing, and collaborating on repositories.
 
 Originally designed to manage large open-source software projects, GitHub's use has expanded to many other types of organizations and individuals, with [over 40 million users](https://octoverse.github.com/).
@@ -140,10 +141,17 @@ When you access a website, the server sends your computer the code which your br
 Thus, one fascinating aspect of the web is that everyone must share code to participate.
 
 {% capture source %}
+<div class="row">
+<div class="col-md-4 mb-2"><img class="img-fluid" src="{{ '/images/viewsource.png' | relative_url }}"></div>
+<div class="col-md-8" markdown="1">
+
 Right click on any web page and select <span class="term">View page source</span> to see the code that is being rendered by the browser (shortcut: `Ctrl + U`). 
 Right click on any element in the page and select "Inspect" or "Inspect Element" to open your browser's built in developer tools.
 
-This is a great way to learn about HTML and to understand how others created the sites you use.{% endcapture %}
+This is a great way to learn about HTML and to understand how others created the sites you use.
+
+</div></div>
+{% endcapture %}
 {% include alert.html text=source color="info"%}
 
 To review the basic building blocks of the web, next let's create an HTML file. 
@@ -199,10 +207,10 @@ Once it is complete (assuming everything goes well!), a green check will appear 
 
 <span class="term">Markdown:</span>
 
-- [Markdown](https://daringfireball.net/projects/markdown/){:target="_blank" rel="noopener"} (original spec by John Gruber)
 - [Mastering Markdown GitHub Guide](https://guides.github.com/features/mastering-markdown/){:target="_blank" rel="noopener"}
 - [GitHub Markdown documentation](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax){:target="_blank" rel="noopener"}
 - [Markdown and Pandoc for Academic Writing](https://evanwill.github.io/write-md/){:target="_blank" rel="noopener"}
+- [Markdown](https://daringfireball.net/projects/markdown/){:target="_blank" rel="noopener"} (original spec by John Gruber)
 
 <span class="term">HTML:</span>
 

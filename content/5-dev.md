@@ -6,23 +6,27 @@ description: >
     Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow.
 ---
 
-If you are excited to jump further into GitHub Pages and Jekyll you might want some additional software installed on your computer, 
-including a text editor, Git, Ruby, and Jekyll.
-The instructions below will set up your local development environment and provide a bit of background.
+## Development Environment 
+
+To work with Jekyll on your local machine you will need some software installed on your computer, including a text editor, Git, Ruby, and Jekyll. 
+Getting everything set up can be a major hurdle, but stick with it!
+This environment will empower you to edit code, version control, manage your files, and create websites--so its pretty neat and rewarding.
 
 ### Text Editor
 
-When working with code you should have a good text editor.
+When working with code you need a good text editor.
+
 Word processors such as MS Word can not be used to create or edit code.
 Windows Notepad does not handle UTF-8 encoding or UNIX line endings that are standard for cross platform applications. 
 
 For basic editing, Windows [Notepad++](https://notepad-plus-plus.org/), Mac TextEdit, or Linux Gedit are sufficient.
 However, a more complete code editor will be helpful for managing Jekyll projects.
-
-Open-source cross platform suggestions:
+Try one of these open source, cross platform options:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Atom](https://atom.io/)
+
+These editors will allow you to work on whole folders of files at once (i.e. your Jekyll project repository) and have built in helpers for using and visualization Git. 
 
 ### Git
 
@@ -33,13 +37,15 @@ Your GitHub Pages projects will be under Git version control, so you need the so
 Installing it is pretty straightforward:
 
 - Windows: install [Git for Windows](https://git-for-windows.github.io/) using the default options, except when setup asks you to choose the default editor used by Git, select "Use the Nano editor by default". This will give you Git, Git Bash, and Git GUI. Git Bash is a great terminal that lets you use UNIX style commands and utilities on Windows.
-- Mac: check if Git is already installed by opening terminal and typing `git --version`. If you do not have it, download the official [Mac installer](https://git-scm.com/downloads).
-- Linux: check if Git is already installed by opening terminal and typing `git --version`. If you do not have it, install from your distribution's software center or package manager (for Ubuntu `sudo apt install git`).
+- Mac: you will need "Xcode Command Line Tools" installed, so open a terminal (to find it search for "terminal" in Spotlight), type in the command `xcode-select --install`, and follow the prompts. After the install finishes, try typing `git --version`. If you want a newer version, download the official [Mac installer](https://git-scm.com/downloads).
+- Linux: check if Git is already installed by opening terminal and typing `git --version`. If you do not have it, install from your distribution's package manager (for Ubuntu `sudo apt install git`).
 
 If you are interested in using a visual GUI application integrated with GitHub, Windows and Mac users should also install [GitHub Desktop](https://desktop.github.com/) using the default options.
 You can install GitHub Desktop in addition to other versions of Git.
-
 There are other [GUI apps available](https://git-scm.com/downloads/guis) for managing and visualizing Git repositories, including Linux options.
+
+Generally, it is easiest to start your project repository on GitHub, then `clone` the repository to your local machine to start working on it. 
+This ensures your local copy is linked to the `remote` on GitHub. 
 
 ### Ruby
 
@@ -65,15 +71,33 @@ Here is a short summary:
 Jekyll is a Gem, a software package installed via Ruby's management system called RubyGems (similar to Python's Pip). 
 
 To install Jekyll, open a terminal and type:
+
 `gem install jekyll bundler`
 
 This will take a minute or two as Gem installs all the dependencies and builds extensions (on Windows it may appear as if nothing is happening, but be patient!).
+Jekyll is made up of dozens of other Ruby Gems, so [Bundler](https://bundler.io/) is a helper to manage dependencies. 
+If you are just using Ruby for Jekyll on smaller projects, you hopefully won't have to deal with Bundler and the maze of dependencies!
 
+-------------------------
 
-### Sass  
+## Start a Jekyll Project 
 
-[Sass](http://sass-lang.com/) is a CSS extension / preprocessor. 
-All normal CSS is valid SCSS, but Sass adds many powerful functions and programatic features. 
-Writing SCSS is often easier and more sensible, for example by supporting nesting, variables, and operators. 
-Jekyll lets you write SASS in modular chucks called partials, in the `_sass` directory, that will be combined and compiled into normal CSS files when the site is built.
+As a demonstration, let's create a workshop website just like this one. 
 
+Overview:
+
+1. Go to the [workshop-template-b repository](https://github.com/evanwill/workshop-template-b) on GitHub
+2. Make your own copy of the code on GitHub by clicking the green "Use this template" button (alternatively use Import, or just download the code and copy the files into your own repo).
+3. Clone your new repository to your local machine.
+4. Open folder in your text editor.
+5. Edit the `_config.yml` with your project info (commit).
+6. Edit the content pages in markdown (found in the "content" folder) (commit!).
+7. Push to GitHub.
+
+-------------
+
+{% capture reference %}
+- [Jekyll step-by-step introduction](https://jekyllrb.com/docs/step-by-step/01-setup/){:target="_blank" rel="noopener"}
+
+{% endcapture %}
+{% include card.html text=reference header="Reference" %}

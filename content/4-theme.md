@@ -5,7 +5,7 @@ topics: layouts; includes; data; Liquid; Liquid variables
 description: >
     In this section of the workshop we will create a Layout, Include, and Data file--then we will use Liquid to pull it all together.
     This will give you a better idea of how the components of a Jekyll project fit together to customize a theme or build your own.
-youtubeid: SWVjQsvQocA
+#youtubeid: SWVjQsvQocA
 ---
 
 ## Customizing Themes

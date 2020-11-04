@@ -4,7 +4,7 @@ nav: Blog
 topics: YAML; config.yml; front matter; index.md; posts
 description: > 
     In this section we set up a Jekyll blog on GitHub Pages to learn about _config.yml, YML front matter, and Posts.
-youtubeid: SWVjQsvQocA
+#youtubeid: SWVjQsvQocA
 ---
 
 ## Set Up Your Project Repository
