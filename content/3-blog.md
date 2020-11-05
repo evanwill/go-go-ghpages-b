@@ -272,6 +272,8 @@ It is your opportunity to let us know all the details "about" your project:
 
 *Be sure to check out what your blog looks like with all this new content!*
 
+<div class="border rounded">{% include figure.html img="example-blog.png" %}</div>
+
 -------------
 
 {% capture reference %}
