@@ -127,7 +127,7 @@ For example, you could create a spreadsheet on Google Sheets to collaborate, the
 To add some example data to our blog, let's manually create a CSV:
 
 - On your repository's home page, click the "Add file" button and select "Create new file". 
-- Type your new data filename: `_data/animal_list.csv`
+- Type your new data filename: `_data/animal.csv`
 - Add the include HTML, following the (*extremely frivolous*) example below.
 - Fill in your "commit message" and click the green "Commit changes" button.
 
