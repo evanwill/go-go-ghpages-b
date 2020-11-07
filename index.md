@@ -16,7 +16,10 @@ Along the way we will cover the basics of GitHub, HTML, Markdown, and Jekyll.
 You will learn how to set up a project repository, write content in Markdown, and publish your site, all using GitHub’s user friendly web interface. 
 More advanced usage of Jekyll for local web development is introduced final section.
 
-*(this is V.2 of the earlier [Go-Go GH-Pages workshop](https://evanwill.github.io/go-go-ghpages/))*
+Each section of the workshop has a video embedded on the page (shot in Nov 2020).
+Alternatively, checkout the [Go-Go GitHub Pages playlist on YouTube](https://youtu.be/moJgWrD6dwg){:target='_blank' rel='noopener'}.
+
+*(note: this is an updated version of the earlier [Go-Go GH-Pages workshop](https://evanwill.github.io/go-go-ghpages/))*
 
 ## Workshop Prep
 

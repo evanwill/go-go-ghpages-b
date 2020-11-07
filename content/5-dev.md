@@ -3,7 +3,7 @@ title: Developing with Jekyll
 nav: Dev
 topics: text editor; git; ruby; Jekyll 
 description: > 
-    Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow.
+    Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow. (video coming soon!)
 ---
 
 ## Development Environment 
