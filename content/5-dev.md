@@ -88,7 +88,7 @@ This makes it easier to customize than working with the Gem based theme system.
 
 Overview:
 
-1. Go to the [bootstrap-template repository](https://github.com/uidaholib/bootstrap-template) on GitHub.
+1. Go to the [bootstrap-template repository](https://github.com/thecdil/bootstrap-template) on GitHub.
 2. Make your own copy of the code on GitHub by clicking the green "Use this template" button (alternatively use Import, or just download the code and copy the files into your own repo).
 3. Clone your new repository to your local machine (using Git or GitHub Desktop).
 4. Open folder in your text editor.
