@@ -82,17 +82,22 @@ If you are just using Ruby for Jekyll on smaller projects, you hopefully won't h
 
 ## Start a Jekyll Project 
 
-As a demonstration, let's create a workshop website just like this one. 
+As a demonstration, let's create a basic Bootstrap website using an existing template. 
+In this case we are not using Jekyll `theme`, instead all the "theme" files will be contained inside the repository.
+This makes it easier to customize than working with the Gem based theme system.
 
 Overview:
 
-1. Go to the [workshop-template-b repository](https://github.com/evanwill/workshop-template-b) on GitHub
+1. Go to the [bootstrap-template repository](https://github.com/uidaholib/bootstrap-template) on GitHub.
 2. Make your own copy of the code on GitHub by clicking the green "Use this template" button (alternatively use Import, or just download the code and copy the files into your own repo).
-3. Clone your new repository to your local machine.
+3. Clone your new repository to your local machine (using Git or GitHub Desktop).
 4. Open folder in your text editor.
-5. Edit the `_config.yml` with your project info (commit).
-6. Edit the content pages in markdown (found in the "content" folder) (commit!).
-7. Push to GitHub.
+5. Edit the `_config.yml` with your project info (i.e. fill in `url` and `baseurl` to match your repository location, then edit `title`, `description`, `year`, and `author` for your project. Then Git Commit!).
+6. In the root of your repository, start a Terminal (or use one built into your text editor). Type the command `jekyll s` to start the development server. Copy the localhost URL it provides, paste into a private browser tab to view your site locally.
+7. In the "pages" folder, edit the stubs in Markdown to create content (and Git Commit!).
+8. When done, Git Commit all changes, and Git Push to GitHub.
+9. Activate GitHub Pages in your repository's Settings.
+10. Enjoy website!
 
 -------------
 
