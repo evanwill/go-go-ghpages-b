@@ -8,7 +8,13 @@ description: >
 
 ## Development Environment 
 
-To work with Jekyll on your local machine you will need some software installed on your computer, including a text editor, Git, Ruby, and Jekyll. 
+To work with Jekyll on your local machine you will need some software installed on your computer, including: 
+
+- A text editor
+- Git
+- Ruby (2.5 +)
+- Jekyll 
+
 Getting everything set up can be a major hurdle, but stick with it!
 This environment will empower you to edit code, version control, manage your files, and create websites--so its pretty neat and rewarding.
 
@@ -90,19 +96,21 @@ Overview:
 
 1. Go to the [bootstrap-template repository](https://github.com/thecdil/bootstrap-template) on GitHub.
 2. Make your own copy of the code on GitHub by clicking the green "Use this template" button (alternatively use Import, or just download the code and copy the files into your own repo).
-3. Clone your new repository to your local machine (using Git or GitHub Desktop).
-4. Open folder in your text editor.
-5. Edit the `_config.yml` with your project info (i.e. fill in `url` and `baseurl` to match your repository location, then edit `title`, `description`, `year`, and `author` for your project. Then Git Commit!).
+3. Clone your new repository to your local machine (using Git or GitHub Desktop, click the green "Code" button for the link).
+4. Open the repository folder in your text editor.
+5. Edit the `_config.yml` with your project info (i.e. edit `title`, `description`, `year`, and `author` for your project). Then Git Commit!
 6. In the root of your repository, start a Terminal (or use one built into your text editor). Type the command `jekyll s` to start the development server. Copy the localhost URL it provides, paste into a private browser tab to view your site locally.
-7. In the "pages" folder, edit the stubs in Markdown to create content (and Git Commit!).
-8. When done, Git Commit all changes, and Git Push to GitHub.
-9. Activate GitHub Pages in your repository's Settings.
-10. Enjoy website!
+7. In the "pages" folder, edit the stubs in Markdown to create content (see [bootstrap-template docs](https://github.com/thecdil/bootstrap-template/blob/main/docs/create-website.md){:target="_blank" rel="noopener"} for options). And Git Commit!
+8. Customize with Sass/CSS, edit "assets/css/custom.scss", "_sass/_custom.scss", "_data/theme-colors.csv" (options built into bootstrap-template). And Git Commit!
+9. When done, Git Commit all changes, and Git Push to GitHub.
+10. Activate GitHub Pages in your repository's Settings.
+11. Enjoy website!
 
 -------------
 
 {% capture reference %}
 - [Jekyll step-by-step introduction](https://jekyllrb.com/docs/step-by-step/01-setup/){:target="_blank" rel="noopener"}
+- [bootstrap-template docs](https://github.com/thecdil/bootstrap-template/blob/main/docs/create-website.md){:target="_blank" rel="noopener"}
 
 {% endcapture %}
 {% include card.html text=reference header="Reference" %}
