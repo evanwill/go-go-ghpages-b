@@ -70,6 +70,10 @@ A few notes about the YAML in the example above:
 - The variables included in the example are based on options the [Minima](https://github.com/jekyll/minima){:target="_blank" rel="noopener"} (v.3) theme supports--they could be different depending on the theme or project you are creating. Documentation for each theme should tell you what variables can be used to customize the template.
 
 {% capture themes %}
+**Note:** using a `theme` is optional and definitely not necessary!
+Jekyll themes provide a handy starting point so you can focus on content creation, but a pre-made theme is not required.
+You can build out the framework of your site however you want.
+
 In this example we set the `remote_theme` to the official Jekyll theme [Minima](https://github.com/jekyll/minima){:target="_blank" rel="noopener"}.
 Following the pattern `remote_theme: username/repositoryname` allows you to use any theme that is hosted in a GitHub repository ([browse options](https://github.com/topics/jekyll-theme){:target="_blank" rel="noopener"}).
 
@@ -77,13 +81,13 @@ However, the `remote_theme` setting is *specific to GitHub Pages*.
 
 Normally, Jekyll uses the config option `theme` to select themes that are available as Ruby Gems ("gem-based themes").
 GitHub Pages has only a few [supported themes](https://pages.github.com/themes/){:target="_blank" rel="noopener"} using this method.
-When using Jekyll locally, the gem-based theme in config will be installed (using `bundle install`), downloading a copy of the theme and storing it with your Ruby Gems.
+When using Jekyll locally, the gem-based theme set in config will be installed (using `bundle install`), downloading a copy of the theme and storing it with your Ruby Gems.
 In theory, this leaves your project folder clean so you can tweak a few customization options and just focus on content creation.
 
 In practice, because gem-based themes are essentially hidden, extensive customization can be confusing.
 If you are doing a lot of tweaking or want to create your own theme it may be simpler to include the theme files directly in your project repository. 
-In that case do NOT include a `theme` setting in `_config.yml`.
-(Personally, I rarely use a `theme`!)
+In that case do NOT include a `theme`/`remote_theme` setting in `_config.yml`.
+(Personally, I very rarely use a `theme`!)
 
 {% endcapture %}
 {% include alert.html text=themes color="warning" %}
