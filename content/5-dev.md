@@ -74,7 +74,7 @@ Here is a short summary:
 
 ### Jekyll
 
-Jekyll is a Gem, a software package installed via Ruby's management system called RubyGems (similar to Python's Pip). 
+[Jekyll](https://jekyllrb.com/) is a Gem, a software package installed via Ruby's management system called RubyGems (similar to Python's Pip). 
 
 To install Jekyll, open a terminal and type:
 
@@ -83,6 +83,7 @@ To install Jekyll, open a terminal and type:
 This will take a minute or two as Gem installs all the dependencies and builds extensions (on Windows it may appear as if nothing is happening, but be patient!).
 Jekyll is made up of dozens of other Ruby Gems, so [Bundler](https://bundler.io/) is a helper to manage dependencies. 
 If you are just using Ruby for Jekyll on smaller projects, you hopefully won't have to deal with Bundler and the maze of dependencies!
+For more details see Jekyll's [Installation guides](https://jekyllrb.com/docs/installation/).
 
 -------------------------
 
