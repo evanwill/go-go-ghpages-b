@@ -3,7 +3,8 @@ title: Developing with Jekyll
 nav: Dev
 topics: text editor; git; ruby; Jekyll 
 description: > 
-    Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow. (video coming soon!)
+    Want to go further? The next steps involve getting set up to develop Jekyll sites on your own computer. This section walks through the necessary software and introduces the basic workflow.
+youtubeid: QW7BXZ78RgM
 ---
 
 ## Development Environment 
@@ -112,6 +113,7 @@ Overview:
 {% capture reference %}
 - [Jekyll step-by-step introduction](https://jekyllrb.com/docs/step-by-step/01-setup/){:target="_blank" rel="noopener"}
 - [bootstrap-template docs](https://github.com/thecdil/bootstrap-template/blob/main/docs/create-website.md){:target="_blank" rel="noopener"}
+- [Bootstrap](https://getbootstrap.com/) (front-end framework)
 
 {% endcapture %}
 {% include card.html text=reference header="Reference" %}
