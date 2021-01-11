@@ -166,7 +166,7 @@ We will start with an <span class="term">index.html</span> file because by defau
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example Title - appears in browser tab</table>
+        <title>Example Title - appears in browser tab</title>
     </head>
     <body>
         <h1>Header One: Big Text</h1>
