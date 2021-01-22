@@ -17,7 +17,7 @@ You will learn how to set up a project repository, write content in Markdown, an
 More advanced usage of Jekyll for local web development is introduced final section.
 
 Each section of the workshop has a video embedded on the page (shot in Nov 2020).
-Alternatively, checkout the [Go-Go GitHub Pages playlist on YouTube](https://youtu.be/moJgWrD6dwg){:target='_blank' rel='noopener'}.
+Alternatively, checkout the [Go-Go GitHub Pages playlist on YouTube](https://www.youtube.com/playlist?list=PL3MdArvT5LVdkeEZ6x6feSMRjYjoMVEUZ){:target='_blank' rel='noopener'}.
 
 *(note: this is an updated version of the earlier [Go-Go GH-Pages workshop](https://evanwill.github.io/go-go-ghpages/))*
 
