@@ -142,7 +142,7 @@ Thus, one fascinating aspect of the web is that everyone must share code to part
 
 {% capture source %}
 <div class="row">
-<div class="col-md-4 mb-2"><img class="img-fluid" src="{{ '/images/viewsource.png' | relative_url }}"></div>
+<div class="col-md-4 mb-2"><img class="img-fluid" src="{{ '/images/viewsource.png' | relative_url }}" alt="content menu with viewsource option"></div>
 <div class="col-md-8" markdown="1">
 
 Right click on any web page and select <span class="term">View page source</span> to see the code that is being rendered by the browser (shortcut: `Ctrl + U`). 
