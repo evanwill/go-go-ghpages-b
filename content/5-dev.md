@@ -103,7 +103,7 @@ Overview:
 5. Edit the `_config.yml` with your project info (i.e. edit `title`, `description`, `year`, and `author` for your project). Then Git Commit!
 6. In the root of your repository, start a Terminal (or use one built into your text editor). Type the command `jekyll s` to start the development server. Copy the localhost URL it provides, paste into a private browser tab to view your site locally.
 7. In the "pages" folder, edit the stubs in Markdown to create content (see [bootstrap-template docs](https://github.com/thecdil/bootstrap-template/blob/main/docs/create-website.md){:target="_blank" rel="noopener"} for options). And Git Commit!
-8. Customize with Sass/CSS, edit "assets/css/custom.scss", "_sass/_custom.scss", "_data/theme-colors.csv" (options built into bootstrap-template). And Git Commit!
+8. Customize with Sass/CSS, edit "assets/css/main.scss", "_sass/_custom.scss", "_data/theme-colors.csv" (options built into bootstrap-template). And Git Commit!
 9. When done, Git Commit all changes, and Git Push to GitHub.
 10. Activate GitHub Pages in your repository's Settings.
 11. Enjoy website!
