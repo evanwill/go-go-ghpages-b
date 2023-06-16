@@ -16,14 +16,13 @@
 </script>
 <!-- End Matomo Code -->
 {% if site.google-analytics-id %}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics-id }}"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N13F1ZJNR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ site.google-analytics-id }}', {
-    'anonymize_ip': true
-  });
+
+  gtag('config', 'G-7N13F1ZJNR');
 </script>
 {% endif %}{% endif %}
