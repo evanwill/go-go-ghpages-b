@@ -37,11 +37,6 @@ baseurl: /go-go-ghpages-b
 # add search box to footer?
 search: true
 
-# add google analytics if desired (optional)
-# if blank, it will be ignored
-# use JEKYLL_ENV=production on build command
-google-analytics-id: G-7N13F1ZJNR
-
 # defaults (to simplify front matter)
 defaults:
   - scope:
